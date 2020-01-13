@@ -1,6 +1,6 @@
 const express = require("express");
 
-//Routas
+//Rotas
 const router = express.Router();
 router.get("/", (req, res) => {
   res.send("Ola Mundo");
