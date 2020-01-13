@@ -1,13 +1,10 @@
 const express = require("express");
-
-//Rotas
-const router = express.Router();
-router.get("/", (req, res) => {
-  res.send("Ola Mundo");
-});
+const router = require("./routes/index");
 
 //Configuraçôes
 const app = express();
 app.use("/", router);
+
+app.use(express.json());
 
 module.exports = app;

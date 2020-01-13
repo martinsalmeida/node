@@ -5,7 +5,10 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "variables.env" });
 
 //Conexão com o Banco de dados
-mongoose.connect(process.env.DATABASE, { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASE, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 mongoose.Promise = global.Promise;
 mongoose.connection.on("error", error => {
   console.error("ERRO: " + error.message);
