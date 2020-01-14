@@ -1,2 +1,25 @@
+{{>header}}
 <h1>Seja bem vindo</h1>
+
+{{#mostrar}}
 <p>Nome:{{nome}}</p>
+{{/mostrar}}
+
+<ul>
+{{#ingredientes}}
+    <li>nome: {{nome}} - qt: {{qt}}</li>
+{{/ingredientes}}
+
+</ul>
+
+<ul>
+{{#interesses}}
+    <li>{{.}}</li>
+{{/interesses}}
+</ul>
+
+{{^teste}}
+<p>Não há teste </p>
+{{/teste}}
+
+{{!Comentários}}
